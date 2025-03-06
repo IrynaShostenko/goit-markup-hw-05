@@ -1,0 +1,400 @@
+/* ==============================
+   Variables and Global Styles
+   ============================== */
+:root {
+  /* Colors */
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #ffffff;
+  --dairy: #fcfcfc;
+
+  /* Typography Styles */
+  --font-family: 'Roboto', sans-serif;
+  --logo-family: 'Raleway', sans-serif;
+
+  --logo-size: 18px;
+  --logo-weight: 700;
+  --logo-spacing: 0.03em;
+  --logo-line-height: 1.17;
+  --logo-color-first: var(--iris);
+  --logo-color-second: var(--navy-blue);
+  --logo-color-third: var(--cloud);
+  --logo-text-transform: uppercase;
+  --logo-style: normal;
+
+  --h1-size: 56px;
+  --h1-weight: 700;
+  --h1-spacing: 0.02em;
+  --h1-line-height: 1.07;
+
+  --h2-size: 36px;
+  --h2-weight: 700;
+  --h2-spacing: 0.02em;
+  --h2-line-height: 1.11;
+
+  --h3-size: 20px;
+  --h3-weight: 500;
+  --h3-spacing: 0.02em;
+  --h3-line-height: 1.2;
+
+  --body-size: 16px;
+  --body-weight: 400;
+  --body-line-height: 1.5;
+  --body-spacing: 0.02em;
+
+  --small-size: 12px;
+  --small-weight: 400;
+  --small-line-height: 1.17;
+  --small-spacing: 0.04em;
+
+  --medium-size: 16px;
+  --medium-weight: 500;
+  --medium-line-height: 1.5;
+  --medium-spacing: 0.02em;
+
+  --button-text-size: 16px;
+  --button-text-weight: 500;
+  --button-text-line-height: 1.5;
+  --button-text-spacing: 0.04em;
+
+  --link-size: 12px;
+  --link-weight: 400;
+  --link-line-height: 1.33;
+  --link-spacing: 0.04em;
+  --link-decoration: none;
+}
+
+/* ==============================
+   Global Reset
+   ============================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Body
+   ============================== */
+body {
+  font-family: var(--font-family);
+  font-size: var(--body-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-spacing);
+  color: var(--slate);
+  background-color: var(--white);
+}
+
+/* ==============================
+   Typography Global Styles
+   ============================== */
+h1,
+h2,
+h3 {
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  letter-spacing: var(--h1-spacing);
+  line-height: var(--h1-line-height);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  letter-spacing: var(--h2-spacing);
+  line-height: var(--h2-line-height);
+  text-transform: capitalize;
+  color: var(--navy-blue);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  letter-spacing: var(--h3-spacing);
+  line-height: var(--h3-line-height);
+  text-transform: capitalize;
+  color: var(--navy-blue);
+}
+
+p {
+  font-size: var(--body-size);
+  color: var(--slate);
+}
+
+/* ==============================
+   Layout and Sections
+   ============================== */
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding: 120px 0;
+}
+/* ==============================
+   Common Elements
+   ============================== */
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: var(--button-text-size);
+  font-weight: var(--button-text-weight);
+  line-height: var(--button-text-line-height);
+  letter-spacing: var(--button-text-spacing);
+  cursor: pointer;
+  background-color: var(--iris);
+  color: var(--white);
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--ocean);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==============================
+   Utility Classes
+   ============================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ==============================
+   Logo Styles
+   ============================== */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 76px;
+
+  font-family: var(--logo-family);
+  font-size: var(--logo-size);
+  font-weight: var(--logo-weight);
+  line-height: var(--logo-line-height);
+  letter-spacing: var(--logo-spacing);
+  text-transform: var(--logo-text-transform);
+  color: var(--iris);
+  text-decoration: none;
+}
+
+.logo-studio {
+  color: var(--navy-blue);
+}
+
+.logo-studio-footer {
+  color: var(--cloud);
+}
+
+.footer-logo {
+  display: inline-block;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* ==============================
+   Header
+   ============================== */
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--cornflower);
+}
+
+address {
+  font-style: normal;
+}
+header address a {
+  color: var(--slate);
+  text-decoration: none;
+}
+
+header address a:hover,
+header address a:focus {
+  color: var(--ocean);
+}
+
+.top-line-items {
+  color: var(--navy-blue);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 24px 0;
+}
+
+.top-line-items:hover,
+.top-line-items:focus {
+  color: var(--ocean);
+}
+
+.top-line-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.top-line-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.top-line-contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: 188px 0 188px;
+}
+
+.hero-title {
+  text-align: center;
+  max-width: 496px;
+  margin: 0 auto 48px;
+}
+
+.hero-button {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  border-radius: 4px;
+}
+/* ==============================
+   Features Section
+   ============================== */
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+.features-item {
+  width: calc((100% - 72px) / 4);
+}
+.features-devision {
+  margin-bottom: 8px;
+}
+
+/* ==============================
+   Our Team Section
+   ============================== */
+.team {
+  background-color: var(--cloud);
+}
+
+.team-title {
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-item {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white);
+}
+
+.team-item-description {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.team-member {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-position {
+  text-align: center;
+}
+
+/* ==============================
+   Portfolio Section
+   ============================== */
+
+.portfolio-title {
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-list-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-item-description {
+  padding: 32px 16px;
+  border: 1px solid var(--cornflower);
+  border-top: none;
+}
+
+.portfolio-item {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+  background-color: var(--navy-blue);
+  color: var(--cloud);
+  padding: 100px 0;
+}
+
+.footer-text {
+  color: var(--cloud);
+}
