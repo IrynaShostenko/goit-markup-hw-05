@@ -232,6 +232,9 @@ img {
 header {
   padding: 24px 0;
   border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 address {
@@ -253,6 +256,11 @@ header address a:focus {
   font-weight: 500;
   padding: 24px 0;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-line-item.current {
+  color: var(--ocean);
 }
 
 .top-line-item:hover,
@@ -268,7 +276,7 @@ header address a:focus {
   background-color: var(--ocean);
   border-radius: 2px;
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
 }
 
 .top-line-nav {
@@ -294,6 +302,9 @@ header address a:focus {
   align-items: center;
   gap: 40px;
 }
+.top-line-contacts-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* ==============================
    Hero Section
@@ -307,6 +318,8 @@ header address a:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -322,6 +335,7 @@ header address a:focus {
   height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ==============================
    Features Section
@@ -442,6 +456,7 @@ header address a:focus {
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
   cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-image {
@@ -457,7 +472,7 @@ header address a:focus {
   height: 100%;
   padding: 40px 32px;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--iris);
   color: var(--cloud);
 }
