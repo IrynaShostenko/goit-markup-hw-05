@@ -247,16 +247,28 @@ header address a:focus {
   color: var(--ocean);
 }
 
-.top-line-items {
+.top-line-item {
   color: var(--navy-blue);
   text-decoration: none;
   font-weight: 500;
   padding: 24px 0;
+  position: relative;
 }
 
-.top-line-items:hover,
-.top-line-items:focus {
+.top-line-item:hover,
+.top-line-item:focus {
   color: var(--ocean);
+}
+
+.top-line-item.current::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -3px;
 }
 
 .top-line-nav {
@@ -290,6 +302,11 @@ header address a:focus {
   background-color: var(--navy-blue);
   color: var(--white);
   padding: 188px 0 188px;
+  background-image: linear-gradient(var(--grey), var(--grey)),
+    url('../images/hero/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -313,11 +330,25 @@ header address a:focus {
   display: flex;
   gap: 24px;
 }
+
 .features-item {
   width: calc((100% - 72px) / 4);
 }
+
+.features-icon {
+  display: flex;
+  background-color: var(--cloud);
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  margin-bottom: 8px;
+}
+
 .features-devision {
   margin-bottom: 8px;
+  text-align: left;
 }
 
 /* ==============================
@@ -340,6 +371,11 @@ header address a:focus {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white);
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-item-description {
@@ -354,6 +390,38 @@ header address a:focus {
 
 .team-position {
   text-align: center;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--iris);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--ocean);
+}
+
+.social-icon {
+  fill: var(--cloud);
 }
 
 /* ==============================
@@ -373,6 +441,7 @@ header address a:focus {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  cursor: pointer;
 }
 
 .portfolio-item-description {
@@ -397,4 +466,30 @@ footer {
 
 .footer-text {
   color: var(--cloud);
+  max-width: 264px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-info {
+  margin-right: 120px;
+}
+
+.footer-socials .social-list {
+  gap: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer .social-link:hover,
+footer .social-link:focus {
+  background-color: var(--green);
+}
+
+.social-title {
+  color: var(--white);
+  font-weight: var(--medium-weight);
+  margin-bottom: 16px;
 }
