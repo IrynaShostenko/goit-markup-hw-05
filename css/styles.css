@@ -335,7 +335,7 @@ header address a:focus {
   height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ==============================
    Features Section
