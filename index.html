@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+    <!-- #region fonts -->
 
-    <!-- #fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- #endfonts -->
+    <!-- #endregion -->
 
-    <!-- #normalizer -->
+    <!-- #region normalizer -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
-    <!-- #endnormalizer -->
+    <!-- #endregion -->
+
+    <!-- #region css -->
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- #endregion -->
   </head>
   <body>
     <!-- #region header -->
@@ -477,8 +482,120 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="subscribe-title">Subscribe</p>
+          <form class="subscribe-form">
+            <label class="subscribe-label">
+              <input
+                class="subscribe-input"
+                name="email"
+                type="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="subscribe-btn button" type="submit">
+              Subscribe
+              <svg class="subscribe-icon" height="24" width="24">
+                <use href="./images/icons.svg#icon-plane"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- #endregion -->
+
+    <!-- #region modal -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <button
+          class="modal-close-btn"
+          type="button"
+          aria-label="Modal close button"
+        >
+          <svg height="8" width="8" class="modal-close-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form>
+          <div class="input-group">
+            <label class="modal-label" for="user-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="modal-input modal-form-field"
+                type="text"
+                name="user-name"
+                id="user-name"
+                required=""
+              />
+              <svg height="24" width="18" class="modal-icon">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="modal-label" for="user-phone">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="modal-input modal-form-field"
+                type="text"
+                name="user-phone"
+                id="user-phone"
+                required=""
+              />
+              <svg height="24" width="18" class="modal-icon">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="modal-label" for="user-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="modal-input modal-form-field"
+                type="text"
+                name="user-email"
+                id="user-email"
+                required=""
+              />
+              <svg height="24" width="18" class="modal-icon">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="textarea-group">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-textarea modal-form-field"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              rows="8"
+            ></textarea>
+          </div>
+          <div class="checkbox-wrapper">
+            <input
+              class="visually-hidden modal-checkbox"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+            />
+            <label class="checkbox-label modal-label" for="user-privacy">
+              <span class="checkmark">
+                <svg height="8" width="10">
+                  <use href="./images/icons.svg#icon-checkbox"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="policy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="modal-send-btn button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
     <!-- #endregion -->
   </body>
 </html>

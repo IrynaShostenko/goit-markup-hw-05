@@ -1,20 +1,20 @@
-/* ==============================
-   Variables and Global Styles
-   ============================== */
+/* #region Variables and Global Styles */
+
 :root {
   /* Colors */
   --iris: #4d5ae5;
   --ocean: #404bbf;
   --navy-blue: #2e2f42;
   --green: #31d0aa;
-  --slate: #434455;
-  --light-slate: #8e8f99;
   --cornflower: #e7e9fc;
   --cloud: #f4f4fd;
-  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --slate: #434455;
+  --light-slate: #8e8f99;
   --grey: rgba(46, 47, 66, 0.7);
   --white: #ffffff;
   --dairy: #fcfcfc;
+  --navy-blue-modal: #2e2f4266;
+  --grey-modal: rgba(46, 47, 66, 0.4);
 
   /* Typography Styles */
   --font-family: 'Roboto', sans-serif;
@@ -24,11 +24,6 @@
   --logo-weight: 700;
   --logo-spacing: 0.03em;
   --logo-line-height: 1.17;
-  --logo-color-first: var(--iris);
-  --logo-color-second: var(--navy-blue);
-  --logo-color-third: var(--cloud);
-  --logo-text-transform: uppercase;
-  --logo-style: normal;
 
   --h1-size: 56px;
   --h1-weight: 700;
@@ -72,9 +67,10 @@
   --link-decoration: none;
 }
 
-/* ==============================
-   Global Reset
-   ============================== */
+/* #endregion */
+
+/* #region Global Reset */
+
 *,
 *::before,
 *::after {
@@ -83,9 +79,10 @@
   box-sizing: border-box;
 }
 
-/* ==============================
-   Body
-   ============================== */
+/* #endregion */
+
+/* #region Body */
+
 body {
   font-family: var(--font-family);
   font-size: var(--body-size);
@@ -96,9 +93,10 @@ body {
   background-color: var(--white);
 }
 
-/* ==============================
-   Typography Global Styles
-   ============================== */
+/* #endregion */
+
+/* #region Typography Global Styles */
+
 h1,
 h2,
 h3 {
@@ -136,20 +134,24 @@ p {
   color: var(--slate);
 }
 
-/* ==============================
-   Layout and Sections
-   ============================== */
+/* #endregion */
+
+/* #region Layout and Sections */
+
 .container {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .section {
   padding: 120px 0;
 }
-/* ==============================
-   Common Elements
-   ============================== */
+
+/* #endregion */
+
+/* #region Common Elements */
+
 ul,
 ol {
   list-style: none;
@@ -178,9 +180,10 @@ img {
   height: auto;
 }
 
-/* ==============================
-   Utility Classes
-   ============================== */
+/* #endregion */
+
+/* #region Utility Classes */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -194,9 +197,10 @@ img {
   overflow: hidden;
 }
 
-/* ==============================
-   Logo Styles
-   ============================== */
+/* #endregion */
+
+/* #region Logo Styles */
+
 .logo {
   display: inline-flex;
   align-items: center;
@@ -226,9 +230,10 @@ img {
   margin-bottom: 16px;
 }
 
-/* ==============================
-   Header
-   ============================== */
+/* #endregion */
+
+/* #region Header */
+
 header {
   padding: 24px 0;
   border-bottom: 1px solid var(--cornflower);
@@ -240,6 +245,7 @@ header {
 address {
   font-style: normal;
 }
+
 header address a {
   color: var(--slate);
   text-decoration: none;
@@ -302,13 +308,15 @@ header address a:focus {
   align-items: center;
   gap: 40px;
 }
+
 .top-line-contacts-item {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ==============================
-   Hero Section
-   ============================== */
+/* #endregion */
+
+/* #region Hero Section */
+
 .hero {
   background-color: var(--navy-blue);
   color: var(--white);
@@ -337,9 +345,11 @@ header address a:focus {
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* ==============================
-   Features Section
-   ============================== */
+
+/* #endregion */
+
+/* #region Features Section */
+
 .features-list {
   display: flex;
   gap: 24px;
@@ -365,9 +375,10 @@ header address a:focus {
   text-align: left;
 }
 
-/* ==============================
-   Our Team Section
-   ============================== */
+/* #endregion */
+
+/* #region Our Team Section */
+
 .team {
   background-color: var(--cloud);
 }
@@ -438,9 +449,9 @@ header address a:focus {
   fill: var(--cloud);
 }
 
-/* ==============================
-   Portfolio Section
-   ============================== */
+/* #endregion */
+
+/* #region Portfolio Section */
 
 .portfolio-title {
   margin-bottom: 72px;
@@ -498,9 +509,11 @@ header address a:focus {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
-/* ==============================
-   Footer
-   ============================== */
+
+/* #endregion */
+
+/* #region Footer */
+
 footer {
   background-color: var(--navy-blue);
   color: var(--cloud);
@@ -531,8 +544,251 @@ footer .social-link:focus {
   background-color: var(--green);
 }
 
-.social-title {
+.footer-socials {
+  margin-right: 80px;
+}
+
+.social-title,
+.subscribe-title {
   color: var(--white);
   font-weight: var(--medium-weight);
   margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white);
+}
+
+.subscribe-input::placeholder {
+  color: var(--white);
+}
+
+.subscribe-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-icon {
+  fill: var(--white);
+  margin-left: 16px;
+}
+
+/* #endregion */
+
+/* #region Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  /* top: 0;
+  left: 0; */
+  background-color: var(--navy-blue-modal);
+  /* width: 100%;
+  height: 100%; */
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none; */
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+
+}
+
+.modal {
+  position: absolute;
+  max-width: 408px;
+  min-height: 584px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--dairy);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--cornflower);
+  color: var(--navy-blue);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon {
+  /* stroke: currentColor; */
+  fill: currentColor;
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  color: var(--white);
+  border: none;
+}
+
+
+.modal-title {
+  color: var(--navy-blue);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 16px;
+
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+.modal-label {
+  color: var(--light-slate);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.modal-form-field {
+  width: 100%;
+  border: 1px solid var(--grey-modal);
+  background-color: transparent;
+  outline: none;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  outline: transparent;
+}
+
+.modal-form-field:focus-within {
+  border-color: var(--iris);
+}
+
+.modal-input {
+  height: 40px;
+  padding-left: 38px;
+  padding-right: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus-within+.modal-icon {
+  fill: var(--iris);
+}
+
+.textarea-group {
+  margin-bottom: 16px;
+}
+
+.modal-textarea {
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+  color: var(--grey-modal);
+  outline: transparent;
+}
+
+.modal-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--grey-modal);
+}
+
+.checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border, fill;
+  margin-right: 4px;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.modal-checkbox:checked+.checkbox-label .checkmark {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
+.policy-link {
+  color: var(--iris);
+  text-decoration: underline;
+}
+
+.modal-send-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: var(--iris);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
 }
